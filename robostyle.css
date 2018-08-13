@@ -1,0 +1,16 @@
+body {
+	color: black;
+	background-color:red;
+	}
+table {
+	background-color:grey;
+	
+	}
+tr     {
+	width:33%;
+	height:33%;
+	}
+td	{
+	width:33%;
+	height:33%;
+	}

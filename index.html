@@ -1,0 +1,32 @@
+<html>
+	<head>
+	<title>Robot</title>
+	<link rel="stylesheet" type="text/css" href="robostyle.css"></link>
+	<script src="jquery.js"></script>
+	<script>
+	function changeColor(color,element){
+	element.style.background=color;
+	}
+	</script>
+	
+	</head>
+	<body>
+		<table border="1" width="100%" height="100%">
+			<tr align="center">
+				<td onmouseover="changeColor('red', this);" onmouseout= "changeColor('grey', this);">1</td>
+				<td onmouseover="console.log('on');changeColor('red', this);$.get('servo1.php', {runFunction: 'forward'});$.get('servo2.php', {runFunction: 'forward'});" onmouseout= "console.log('off');changeColor('grey', this);$.get('servo1.php', {runFunction: 'stop'});$.get('servo2.php', {runFunction: 'stop'});">Forward</td>
+				<td onmouseover="changeColor('red', this);" onmouseout= "changeColor('grey', this);">3</td>	
+			</tr>
+			<tr align="center">
+				<td onmouseover="changeColor('red', this);$.get('servo2.php', {runFunction: 'backward'});$.get('servo1.php', {runFunction: 'forward'});" onmouseout= "changeColor('grey', this);$.get('servo1.php', {runFunction: 'stop'});$.get('servo2.php', {runFunction: 'stop'});">CCW Turn</td>
+				<td onmouseover="changeColor('red', this);$.get('servo1.php', {runFunction: 'stop'});$.get('servo2.php', {runFunction: 'stop'});" onmouseout= "changeColor('grey', this);$.get('servo1.php', {runFunction: 'stop'});$.get('servo2.php', {runFunction: 'stop'});" >Stop </td>
+				<td onmouseover="changeColor('red', this);$.get('servo2.php', {runFunction: 'forward'});$.get('servo1.php', {runFunction: 'backward'});" onmouseout= "changeColor('grey', this);$.get('servo1.php', {runFunction: 'stop'});$.get('servo2.php', {runFunction: 'stop'});">CW Turn</td>	
+			</tr >
+			<tr align="center">
+				<td onmouseover="changeColor('red', this);" onmouseout= "changeColor('grey', this);">7</td>
+				<td onmouseover="changeColor('red', this);$.get('servo2.php', {runFunction: 'backward'});$.get('servo1.php', {runFunction: 'backward'});" onmouseout= "changeColor('grey', this);$.get('servo1.php', {runFunction: 'stop'});$.get('servo2.php', {runFunction: 'stop'});">Backward</td>
+				<td onmouseover="changeColor('red', this);" onmouseout= "changeColor('grey', this);">9</td>	
+			</tr>
+		</table>
+	<body>
+</html>
